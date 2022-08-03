@@ -29,8 +29,8 @@ Desktop view             |  Mobile view
 
 ### Links
 
-- Solution URL: [Frontend mentor solution link](https://your-solution-url.com)
-- Live Site URL: [Live site link](https://your-live-site-url.com)
+- Solution URL: [Frontend mentor solution link](https://www.frontendmentor.io/solutions/single-price-grid-component-made-with-html-and-css-baOrPPlOrB)
+- Live Site URL: [Live site link](https://single-price-grid-new.netlify.app/)
 
 ## My process
 
