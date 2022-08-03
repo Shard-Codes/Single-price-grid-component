@@ -1,0 +1,175 @@
+/*====================== Google fonts link - Karla ======================*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/*====================== Css variables ======================*/
+:root {
+  /*============ Colors  ============*/
+  /* Primary */
+  --clr-primary-900: hsl(179, 62%, 43%);
+  --clr-primary-800: hsl(71, 73%, 54%);
+
+  /* Neutral */
+  --clr-neutral-900: hsl(218, 22%, 67%);
+  --clr-neutral-200: hsl(204, 43%, 93%);
+
+  /*============ Typography ============*/
+  /* Fonts */
+  --ff-primary: 'Karla', sans-serif;
+
+  /* Font weights */
+  --fw-bold: 700;
+  --fw-regular: 400;
+
+  /* Font sizes */
+  --fs-500: 1.5rem;
+  --fs-400: 1.5rem;
+  --fs-300: 1.25rem;
+  --fs-200: 1rem;
+  --fs-100: .938rem;
+}
+
+/*====================== Html reset ======================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*====================== Base styles ======================*/
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-neutral-200);
+  font-family: var(--ff-primary);
+  line-height: 1.1;
+}
+
+html {
+  font-size: 100%;
+}
+
+/*====================== Single page grid component ======================*/
+.card {
+  max-width: 670px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 25px 30px rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.25rem auto;
+}
+
+.card__top,
+.card__left,
+.card__right {
+  padding: 1.75rem 2rem 1.75rem 1.75rem;
+}
+
+.card__top {
+  grid-column: 1 / -1;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card__title {
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-900);
+  font-size: var(--fs-500);
+  margin-bottom: 1.5rem;
+}
+
+.sub__title {
+  font-size: var(--fs-300);
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-bold);
+  margin-bottom: .75rem;
+  display: block;
+}
+
+.card__description {
+  line-height: 1.5;
+  font-size: var(--fs-200);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-900);
+}
+
+.card__left {
+  background-color: hsl(179, 62%, 43%);
+  color: hsl(0, 0%, 100%);
+}
+
+.card__heading {
+  color: hsl(0, 0%, 100%);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+}
+
+.card__price {
+  margin: 1.25rem 0 .5rem 0;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.card__price p {
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+}
+
+.card__price span {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-200);
+  opacity: .7;
+}
+
+.card__text {
+  margin-bottom: 2.25rem;
+  font-size: var(--fs-100);
+  color: var(--clr-neutral-200);
+}
+
+.card__button {
+  padding: 1rem 1.75rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  background-color: var(--clr-primary-800);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, .1);
+  font: inherit;
+  font-size: var(--fs-200);
+  font-weight: var(--fw-bold);
+}
+
+.card__right {
+  background-color: hsl(179, 62%, 48%);
+}
+
+.card__list {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: .25rem;
+  list-style: none;
+}
+
+.card__item {
+  font-size: var(--fs-100);
+  color: var(--clr-neutral-200);
+  font-weight: var(--fw-regular);
+}
+
+/*====================== Media queries ======================*/
+/* 512px wide */
+@media (max-width: 32em) {
+  /*====================== Single page grid component ======================*/
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
